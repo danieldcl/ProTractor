@@ -3,7 +3,8 @@ This is a project/progress tracker tool bootstrapped with [Create React App](htt
 ## Available Scripts
 
 In the project directory, you can run:
-
+### `npm install` 
+follow by
 ### `npm start`
 
 Runs the app in the development mode.<br />
