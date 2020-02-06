@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Header from './header';
 import Layout from './layout';
 
 class App extends React.Component {
@@ -69,9 +70,7 @@ class App extends React.Component {
     )
     return (
       <div className="App">
-        <header className="App-header">
-        ProTractor
-        </header>
+        <Header />
         <main>
           {tasks}
         </main>
