@@ -19,7 +19,7 @@ export default class Layout extends React.Component{
             (i, k) => <Row key={k} task={i} row={this.props.row} moveItem={this.props.moveItem} index={k}/>
         )
         return (
-            <div className="col-sm-6 col-md-3">
+            <div className="col-6 col-md-3 pt-3">
                 <h3 className={`title border-bottom border-warning ${this.props.color} `}>{this.props.task.title}</h3>
                 <ul className="items list-group bg-light-yellow pr-1 pl-1">
                     {items}

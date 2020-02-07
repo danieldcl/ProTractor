@@ -29,13 +29,44 @@ class App extends React.Component {
     }
     this.addNew = this.addNew.bind(this);
     this.moveItem = this.moveItem.bind(this);
+    this.getItems = this.getItems.bind(this);
+    this.clearItems = this.clearItems.bind(this);
   }
 
   componentDidMount(){
+    this.getItems()
+  }
+
+  getItems(){
     const tasks = JSON.parse(localStorage.getItem('tasks'));
     if (tasks) {
       this.setState({tasks});
     }
+  }
+
+  clearItems(){
+    const r = window.confirm("Do you want to remove all the data? This action is not revertable.")
+        if (r) {
+          this.setState({tasks:[
+            {
+              title:'Done',
+              items: []
+            },
+            {
+              title:'In Progress',
+              items: []
+            },
+            {
+              title:'Selected',
+              items: []
+            },
+            {
+              title:'Planning',
+              items: []
+            }
+          ]});
+            localStorage.removeItem('tasks');
+        }
   }
 
   moveItem(direction,index,row){
@@ -70,7 +101,7 @@ class App extends React.Component {
     // )
     return (
       <div className="App">
-        <Header />
+        <Header clearItems={this.clearItems}/>
         <main className="row">
           <Layout color='bg-light-green' task={this.state.tasks[0]} row={0} moveItem={this.moveItem} addNew={this.addNew}/>
           <Layout color='bg-light-blue' task={this.state.tasks[1]} row={1} moveItem={this.moveItem} addNew={this.addNew}/>
