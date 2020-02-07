@@ -65,14 +65,17 @@ class App extends React.Component {
   }
 
   render(){
-    const tasks = this.state.tasks.map(
-      (r, k ) => <Layout key={k} task={r} row={k} moveItem={this.moveItem} addNew={this.addNew}/>
-    )
+    // const tasks = this.state.tasks.map(
+    //   (r, k ) => <Layout key={k} task={r} row={k} moveItem={this.moveItem} addNew={this.addNew}/>
+    // )
     return (
       <div className="App">
         <Header />
         <main className="row">
-          {tasks}
+          <Layout color='bg-light-green' task={this.state.tasks[0]} row={0} moveItem={this.moveItem} addNew={this.addNew}/>
+          <Layout color='bg-light-blue' task={this.state.tasks[1]} row={1} moveItem={this.moveItem} addNew={this.addNew}/>
+          <Layout color='bg-light-purple' task={this.state.tasks[2]} row={2} moveItem={this.moveItem} addNew={this.addNew}/>
+          <Layout color='bg-light-grey' task={this.state.tasks[3]} row={3} moveItem={this.moveItem} addNew={this.addNew}/>
         </main>
       </div>
     );

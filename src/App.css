@@ -23,11 +23,6 @@ main {
   color: white;
 }
 
-.columnLayout {
-  /* width: 25%; */
-  /* margin-right: 15px; */
-}
-
 
 main div:last-of-type {
   margin-right: 0px;
@@ -56,4 +51,16 @@ li {
 
 .bg-light-yellow {
   background-color:#f7e883;
+}
+.bg-light-green {
+  background-color: lawngreen;
+}
+.bg-light-blue {
+  background-color: #83b3f7;
+}
+.bg-light-purple {
+  background-color: #d5a8ff;
+}
+.bg-light-grey {
+  background-color: #cbcacc;
 }
