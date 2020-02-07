@@ -1,6 +1,6 @@
 body {
-  background-color: hsl(220, 13%, 18%);
-  color: white;
+  background-color:#343a40;
+  color:hsl(220, 13%, 18%);
 }
 
 main {
@@ -24,9 +24,10 @@ main {
 }
 
 .columnLayout {
-  width: 25%;
-  margin-right: 15px;
+  /* width: 25%; */
+  /* margin-right: 15px; */
 }
+
 
 main div:last-of-type {
   margin-right: 0px;
@@ -36,16 +37,23 @@ main div:last-of-type {
   height: 25px;
   line-height: 25px;
   font-size: 100%;
-  border: 1px solid rgb(255, 255, 255);
   margin:0;
 }
 
 ul {
   margin:0;
   padding:0;
-  border: 1px solid rgb(255, 255, 255);
 }
 
 li {
   list-style: none;
+}
+
+.btn-xsm {
+  font-size:0.5rem;
+  line-height: 0.3;
+}
+
+.bg-light-yellow {
+  background-color:#f7e883;
 }
